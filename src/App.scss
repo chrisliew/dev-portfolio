@@ -1,0 +1,7 @@
+@import './styles/_fonts';
+@import './styles/landing';
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+}
