@@ -1,0 +1,21 @@
+@import './_colors';
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background: black;
+  height: 3em;
+  align-items: center;
+  font-size: 1em;
+  border-bottom: 3px solid $secondary-font-color;
+  text-transform: uppercase;
+}
+
+.navbar__not-selected {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navbar__selected {
+  color: $primary-font-color;
+}
