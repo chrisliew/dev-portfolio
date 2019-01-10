@@ -1,0 +1,157 @@
+@import './_colors';
+
+.about {
+  max-height: 100%;
+  background: lightgrey;
+  padding-bottom: 8em;
+}
+
+.about__header {
+  padding: 3em 0 2em 0;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about__header:after {
+  content: ''; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 10%; /* Change this to whatever width you want. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  border-bottom: 5px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.about__header img {
+  // color: black;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.3em;
+}
+
+.hexagon .flexbox__parent {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+  padding-bottom: 7em;
+}
+
+.hexagon__title,
+.hexagon__description {
+  text-align: center;
+}
+
+.hexagon__container {
+  max-width: 150px;
+}
+
+.hexagon__link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 8.5%;
+  margin-left: 0.8em;
+  padding: 16%;
+  transform: rotate(30deg) skewY(30deg) scaleX(0.866); /* .866 = sqrt(3)/2 */
+}
+.hexagon__link:before {
+  display: block;
+  position: absolute; /* 86.6% = (sqrt(3)/2)*100% = .866*100% */
+  top: 6.7%;
+  right: 0;
+  bottom: 6.7%;
+  left: 0; /* 6.7% = (100% -86.6%)/2 */
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg); /* 1.155 = 2/sqrt(3) */
+  /* background-color: rgba(30,144,255,.56); */
+  background-size: cover;
+  content: '';
+}
+
+.hexagon__main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hexagon__main ul {
+  margin: 0;
+  padding: 5px;
+}
+
+.hexagon__main ul li {
+  margin: 5px;
+  list-style: none outside none;
+  display: inline-block;
+}
+
+.hexagon__main i {
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background-color: $secondary-font-color;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 25px;
+
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+
+.hexagon__link i {
+  transform: rotate(-45deg) skewY(0) scaleX(2.4);
+}
+
+.description__container {
+  text-align: center;
+  max-width: 100%;
+  padding-bottom: 10em;
+}
+
+.chris__image {
+  width: 18em;
+  height: 18em;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.description__paragraph {
+  max-width: 20em;
+  margin: auto;
+}
+
+.about__desc__skills {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.techskills img {
+  width: 60px;
+  height: 60px;
+}
+
+.techskills__libraries,
+.techskills__languages,
+.techskills__databases {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.techskills__libraries--content,
+.techskills__languages--content,
+.techskills__database--content {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid $primary-font-color;
+  border-radius: 20%;
+  padding: 0.7em;
+  margin: 0.5em;
+}

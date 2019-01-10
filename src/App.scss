@@ -1,6 +1,14 @@
 @import './styles/_fonts';
 @import './styles/landing';
 @import './styles/navbar';
+@import './styles/about';
+@import './styles/portfolio';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: $font-stack;

@@ -7,13 +7,18 @@
   height: 3em;
   align-items: center;
   font-size: 1em;
-  border-bottom: 3px solid $secondary-font-color;
+  border-bottom: 5px solid $secondary-font-color;
   text-transform: uppercase;
 }
 
 .navbar__not-selected {
   text-decoration: none;
   color: white;
+  transition: color 0.2s linear;
+}
+
+.navbar__not-selected:hover {
+  color: $primary-font-color;
 }
 
 .navbar .navbar__selected {

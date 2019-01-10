@@ -1,0 +1,33 @@
+@import './_colors';
+
+.portfolio {
+  max-height: 100%;
+  background: white;
+  padding-bottom: 8em;
+}
+
+.portfolio__header {
+  padding: 3em 0 2em 0;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio__header:after {
+  content: ''; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 10%; /* Change this to whatever width you want. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  border-bottom: 5px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.portfolio__header img {
+  // color: black;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.3em;
+}

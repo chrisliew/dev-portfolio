@@ -3,6 +3,8 @@ import { StickyContainer, Sticky } from 'react-sticky';
 
 import Landing from './components/Landing';
 import Navbar from './components/Navbar';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
 
 import './App.scss';
 
@@ -19,100 +21,8 @@ class App extends Component {
               </header>
             )}
           </Sticky>
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          <br />
-          Test
-          <br />
-          Test
-          <br />
-          Test
-          <br />
+          <About />
+          <Portfolio />
         </StickyContainer>
       </div>
     );
