@@ -5,6 +5,7 @@ import Landing from './components/Landing';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 import './App.scss';
 
@@ -23,6 +24,7 @@ class App extends Component {
           </Sticky>
           <About />
           <Portfolio />
+          <Contact />
         </StickyContainer>
       </div>
     );

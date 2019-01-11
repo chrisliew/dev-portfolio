@@ -3,7 +3,16 @@ import React, { Component } from 'react';
 const TechSkills = () => {
   return (
     <div className='techskills'>
-      <h1>Tech Skills</h1>
+      <h1 className='techskills__header'>
+        <div>
+          <img
+            className='image'
+            src='/images/techskill-icon.jpg'
+            alt='techskills-icon'
+          />{' '}
+          Tech Skills
+        </div>
+      </h1>
       <div className='techskills__languages'>
         <h2>Languages</h2>
         <div className='techskills__languages--content'>
@@ -56,7 +65,7 @@ const TechSkills = () => {
           <img src='/images/bootstrap-icon.png' alt='bootstrap icon' />
         </div>
         <div className='techskills__libraries--content'>
-          Moment.js
+          Moment
           <br />
           <img src='/images/moment-icon.png' alt='moment icon' />
         </div>
@@ -92,7 +101,11 @@ const TechSkills = () => {
         <div className='techskills__database--content'>
           Postgres SQL
           <br />
-          <img src='/images/postgres-icon.png' alt='postgres icon' />
+          <img
+            className='postgres'
+            src='/images/postgres-icon.png'
+            alt='postgres icon'
+          />
         </div>
       </div>
     </div>
@@ -104,11 +117,10 @@ const Description = () => {
     <div className='description'>
       <div className='description__container'>
         <img className='chris__image' src='/images/chris.jpg' alt='chris' />
-        <h1>Who's this guy?</h1>
+        <h1>Chris Liew</h1>
         <p className='description__paragraph'>
-          I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have
-          serious passion for UI effects, animations and creating intuitive,
-          dynamic user experiences. Let's make something special.
+          I'm a full stack developer in Vancouver, BC. I have a passion for
+          creating efficient websites that are optimized for businesses.
         </p>
       </div>
     </div>
@@ -126,9 +138,9 @@ const Hexagon = () => {
                 <i className='fas fa-fighter-jet' />{' '}
               </a>
             </li>
-            <h1 className='hexagon__title'>Fast</h1>
+            <h1 className='hexagon__title'>Designs</h1>
             <div className='hexagon__description'>
-              Fast load times and lag free interaction, my highest priority.
+              Elegant designs that keeps the UX top of mind.
             </div>
           </div>
           <div className='hexagon__container'>
@@ -139,7 +151,7 @@ const Hexagon = () => {
             </li>
             <h1 className='hexagon__title'>Responsive</h1>
             <div className='hexagon__description'>
-              My layouts will work on any device, big or small.
+              My websites are optimized for all device, big or small.
             </div>
           </div>
           <div className='hexagon__container'>
@@ -161,7 +173,7 @@ const Hexagon = () => {
             </li>
             <h1 className='hexagon__title'>Efficient</h1>
             <div className='hexagon__description'>
-              Writing clean and efficient code.
+              Writing clean and efficient code is a priority of mine.
             </div>
           </div>
         </ul>
@@ -173,7 +185,7 @@ const Hexagon = () => {
 class About extends Component {
   render() {
     return (
-      <div className='about'>
+      <div id='about' className='about'>
         <h1 className='about__header'>
           <div>
             <img src='/images/about.png' alt='about' /> About

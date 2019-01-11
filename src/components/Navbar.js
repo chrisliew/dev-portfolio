@@ -20,6 +20,9 @@ class Navbar extends Component {
       resume: 'navbar__not-selected',
       contact: 'navbar__not-selected'
     });
+    document
+      .getElementById('landing')
+      .scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
   handleOnClickAbout = event => {
@@ -30,6 +33,9 @@ class Navbar extends Component {
       resume: 'navbar__not-selected',
       contact: 'navbar__not-selected'
     });
+    document
+      .getElementById('about')
+      .scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
   handleOnClickPortfolio = event => {
@@ -40,6 +46,9 @@ class Navbar extends Component {
       resume: 'navbar__not-selected',
       contact: 'navbar__not-selected'
     });
+    document
+      .getElementById('portfolio')
+      .scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
   handleOnClickResume = event => {
@@ -60,6 +69,9 @@ class Navbar extends Component {
       resume: 'navbar__not-selected',
       contact: 'navbar__selected'
     });
+    document
+      .getElementById('contact')
+      .scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
   render() {
