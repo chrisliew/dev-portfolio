@@ -47,7 +47,6 @@
 
 .hexagon__container {
   max-width: 150px;
-  z-index: -1;
 }
 
 .hexagon__link {
@@ -108,10 +107,6 @@
 
 .hexagon__link i {
   transform: rotate(-45deg) skewY(0) scaleX(2.4);
-}
-
-.about .description {
-  z-index: -1;
 }
 
 .description__container {

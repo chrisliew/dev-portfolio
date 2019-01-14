@@ -13,13 +13,16 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* <Navbar /> */}
         <Landing />
         <StickyContainer>
           <Sticky>
             {({ style }) => (
-              <header style={style}>
-                <Navbar />
-              </header>
+              <div>
+                <header style={style} className='sticky'>
+                  <Navbar />
+                </header>
+              </div>
             )}
           </Sticky>
           <About />
