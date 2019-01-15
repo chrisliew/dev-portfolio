@@ -4,18 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: rgb(30, 48, 48);
-  color: $primary-font-color;
+  color: black;
   padding-bottom: 5em;
 }
-
-// .contact__header {
-//   margin-top: 2em;
-//   text-transform: uppercase;
-//   margin-bottom: 1em;
-//   color: black;
-//   border-bottom: 5px solid black;
-// }
 
 .contact__header {
   padding: 3em 0 2em 0;
@@ -46,7 +37,8 @@
 .contact .logos {
   display: flex;
   justify-content: space-evenly;
-  width: 50em;
+  width: 40em;
+  max-width: 100%;
 }
 
 .contact .logos div {
@@ -54,11 +46,16 @@
 }
 
 .contact .logo {
-  height: 4em;
-  width: 4em;
+  height: 3em;
+  width: 3em;
   margin: 1em;
 }
 
 .contact img:hover {
   opacity: 0.4;
+}
+
+.contact a {
+  text-decoration: none;
+  color: $secondary-font-color;
 }

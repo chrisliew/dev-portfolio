@@ -65,6 +65,11 @@ const TechSkills = () => {
           <img src='/images/bootstrap-icon.png' alt='bootstrap icon' />
         </div>
         <div className='techskills__libraries--content'>
+          Redux
+          <br />
+          <img src='/images/redux-icon.png' alt='redux icon' />
+        </div>
+        <div className='techskills__libraries--content'>
           Moment
           <br />
           <img src='/images/moment-icon.png' alt='moment icon' />
@@ -165,7 +170,7 @@ const Hexagon = () => {
               Strong preference for writing websites that convert.
             </div>
           </div>
-          <div className='hexagon__container'>
+          {/* <div className='hexagon__container'>
             <li>
               <a className='hexagon__link' href='/'>
                 <i className='fab fa-linkedin-in' />{' '}
@@ -175,7 +180,7 @@ const Hexagon = () => {
             <div className='hexagon__description'>
               Writing clean and efficient code is a priority of mine.
             </div>
-          </div>
+          </div> */}
         </ul>
       </div>
     </div>

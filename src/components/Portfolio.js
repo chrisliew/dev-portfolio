@@ -2,72 +2,98 @@ import React, { Component } from 'react';
 
 export const projects = [
   {
+    title: 'Wash Royal',
+    image: '/images/wash-royal.png',
+    site: true,
+    url: 'https://washroyal.herokuapp.com/',
+    github: 'https://github.com/chrisliew/wash-royal',
+    text: (
+      <p>
+        Wash Royal automates laundry pickup and delivery in the city of Da Nang,
+        Vietnam. You can login using Google Oauth and arrange a time for laundry
+        pickup and delivery, and send a payment through the Stripe API.
+        <br />
+        <br />
+        <b>My Role:</b> Coded the entire project myself.
+        <br />
+        <br />
+        <u>
+          <b>Tech Stack:</b>
+        </u>{' '}
+        <br />
+        <b>Front End: </b>Javascript, ReactJS. <br />
+        <b>Back End: </b>Node and Express JS for the server and MongoDB for the
+        database.
+        <br />
+        <b>Libraries/Frameworks:</b> Passport.js, Nodemailer, Moment.js,
+        Bootstrap <br />
+        <b>APIs:</b> Stripe, Google Oauth.
+        <br />
+        <br />
+      </p>
+    )
+  },
+  {
     title: 'Healthii',
     image: '/images/healthii.png',
     site: false,
+    url: '',
+    github: 'https://github.com/chrisliew/healthii',
     text: (
       <p>
-        Healthii is a platform that connects health care providers with clients
-        who need those services. You can login as either a client or as a
-        provider, each with it's own seperate functionality.
+        Healthii connects health care providers with customers. You can login as
+        both a client and a provider, each with it's own seperate UX and
+        reporting tools. There's an SMS function using Twilio.
         <br />
         <br />
-        <b>My Role:</b> Participated in all aspects of the project, by designing
-        most of the front end and some of the back end routes.
+        <b>My Role:</b> Working in a team of 3, I built most of the front end in
+        React and some of the back end routes.
         <br />
         <br />
-        <b>Tech Stack:</b> The front end was built using Javascript with
-        ReactJS. Node and Express JS was used for the server. PostgresSQL
-        database was used with Knex as the interface. There is a SMS sending
-        feature using the Twilio API.
+        <u>
+          <b>Tech Stack:</b>
+        </u>{' '}
+        <br />
+        <b>Front End: </b>Javascript, ReactJS. <br />
+        <b>Back End: </b>Node and Express JS for the server. PostGresSQL and
+        Knex for the database.
+        <br />
+        <b>Libraries/Frameworks:</b> Passport.js, Nodemailer, Moment.js,
+        Bootstrap <br />
+        <b>APIs:</b> Twilio.
         <br />
         <br />
       </p>
     )
   },
   {
-    title: 'Wash Royal',
+    title: 'Shinny Crew',
     image: '/images/Chatty.png',
     site: true,
+    url: '',
+    github: 'https://github.com/chrisliew/healthii',
     text: (
       <p>
-        Washroyal is a platform that connects health care providers with clients
-        who need those services. You can login as either a client or as a
-        provider, each with it's own seperate functionality.
+        Healthii connects health care providers with customers. You can login as
+        both a client and a provider, each with it's own seperate UX and
+        reporting tools. There's an SMS function using Twilio.
         <br />
         <br />
-        <b>My Role:</b> Participated in all aspects of the project, by designing
-        most of the front end and some of the back end routes.
+        <b>My Role:</b> Working in a team of 3, I built most of the front end in
+        React and some of the back end routes.
         <br />
         <br />
-        <b>Tech Stack:</b> The front end was built using Javascript with
-        ReactJS. Node and Express JS was used for the server. PostgresSQL
-        database was used with Knex as the interface. There is a SMS sending
-        feature using the Twilio API.
+        <u>
+          <b>Tech Stack:</b>
+        </u>{' '}
         <br />
+        <b>Front End: </b>Javascript, ReactJS. <br />
+        <b>Back End: </b>Node and Express JS for the server. PostGresSQL and
+        Knex for the database.
         <br />
-      </p>
-    )
-  },
-  {
-    title: 'Fitness Trainer Gains',
-    image: '/images/healthii.png',
-    site: true,
-    text: (
-      <p>
-        Fitness Trainer Gains is a platform that connects health care providers
-        with clients who need those services. You can login as either a client
-        or as a provider, each with it's own seperate functionality.
-        <br />
-        <br />
-        <b>My Role:</b> Participated in all aspects of the project, by designing
-        most of the front end and some of the back end routes.
-        <br />
-        <br />
-        <b>Tech Stack:</b> The front end was built using Javascript with
-        ReactJS. Node and Express JS was used for the server. PostgresSQL
-        database was used with Knex as the interface. There is a SMS sending
-        feature using the Twilio API.
+        <b>Libraries/Frameworks:</b> Passport.js, Nodemailer, Moment.js,
+        Bootstrap <br />
+        <b>APIs:</b> Twilio.
         <br />
         <br />
       </p>
@@ -83,16 +109,28 @@ class ProjectInfo extends Component {
         <div className='portfolio__selected--info'>
           <h1 className='header'>{projects[selected].title}</h1>
           <div className='buttons'>
-            <button className='button'>
-              <img
-                className='github__logo'
-                src='/images/github-logo.png'
-                alt='github-logo'
-              />
-              Github
-            </button>
+            <a
+              href={projects[selected].github}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <button className='button'>
+                <img
+                  className='github__logo'
+                  src='/images/github-logo.png'
+                  alt='github-logo'
+                />
+                Github
+              </button>
+            </a>
             {projects[selected].site ? (
-              <button className='button'>Site</button>
+              <a
+                href={projects[selected].url}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <button className='button'>Site</button>
+              </a>
             ) : (
               ''
             )}
@@ -131,27 +169,48 @@ class Portfolio extends Component {
   };
 
   render() {
-    console.log(this.state);
+    console.log(this.state.activeClass1);
     const listProjects = (
       <div id='project__selected' className='projects__list'>
-        <img
-          className={this.state.activeClass1}
-          onClick={() => this.handleOnClickImage(0, projects[0].image)}
-          src={projects[0].image}
-          alt={projects[0].image}
-        />
-        <img
-          className={this.state.activeClass2}
-          onClick={() => this.handleOnClickImage(1, projects[1].image)}
-          src={projects[1].image}
-          alt={projects[1].image}
-        />
-        <img
-          className={this.state.activeClass3}
-          onClick={() => this.handleOnClickImage(2, projects[2].image)}
-          src={projects[2].image}
-          alt={projects[2].image}
-        />
+        <div className='height-100vh'>
+          <img
+            className={this.state.activeClass1}
+            onClick={() => this.handleOnClickImage(0, projects[0].image)}
+            src={projects[0].image}
+            alt={projects[0].image}
+          />
+          {this.state.activeClass1 === 'active' ? (
+            <div className='text'>Wash Royal</div>
+          ) : (
+            ''
+          )}
+        </div>
+        <div className='height-100vh'>
+          <img
+            className={this.state.activeClass2}
+            onClick={() => this.handleOnClickImage(1, projects[1].image)}
+            src={projects[1].image}
+            alt={projects[1].image}
+          />
+          {this.state.activeClass2 === 'active' ? (
+            <div className='text'>Healthii</div>
+          ) : (
+            ''
+          )}
+        </div>
+        <div className='height-100vh'>
+          <img
+            className={this.state.activeClass3}
+            onClick={() => this.handleOnClickImage(2, projects[2].image)}
+            src={projects[2].image}
+            alt={projects[2].image}
+          />
+          {this.state.activeClass3 === 'active' ? (
+            <div className='text'>Shinny Crew</div>
+          ) : (
+            ''
+          )}
+        </div>
       </div>
     );
     return (

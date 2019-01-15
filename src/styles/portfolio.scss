@@ -9,6 +9,14 @@
   position: relative;
 }
 
+@media (max-width: 641px) {
+  .portfolio {
+    padding: 3em 0 12em 0;
+    -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 5%);
+    clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 5%);
+  }
+}
+
 .portfolio__header {
   padding: 3em 0 2em 0;
   text-transform: uppercase;
@@ -39,26 +47,22 @@
   opacity: 0;
 }
 
-.portfolio__preview--card--selected .portfolio__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5em;
-  color: #b54141;
-  opacity: 1;
-}
-
 .portfolio__preview,
 .projects__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.portfolio__preview--card,
-.portfolio__preview--card--selected,
-.project__list__image,
-.project__list__image--selected,
+@media (max-width: 641px) {
+  .projects__list img {
+    margin-top: 2em;
+    width: 7em;
+    height: 7em;
+  }
+}
+
 .active,
 .not-active {
   display: flex;
@@ -70,11 +74,9 @@
   transition: 0.5s;
 }
 
-.portfolio__preview--card--selected,
 .active {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
   transform: scale(1.07);
-  filter: brightness(20%);
+  filter: brightness(10%);
 }
 
 .portfolio__preview--card--selected .button {
@@ -105,15 +107,26 @@
   margin-top: 5em;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .portfolio__selected .image {
   height: 20em;
   width: 38em;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 641px) {
+  .portfolio__selected .image {
+    max-width: 100%;
+    height: 10em;
+    width: 20em;
+    margin-bottom: 3em;
+  }
 }
 
 .portfolio__selected--info {
-  margin-left: 3em;
+  margin: 0 3em 0 3em;
   max-width: 35em;
 }
 
@@ -149,4 +162,21 @@
 .not-active:hover {
   -webkit-filter: sepia(1);
   filter: sepia(1);
+}
+
+.height-100vh {
+  // height: 100vh;
+  display: flex; /* establish flex container */
+  flex-direction: column; /* stack flex items vertically */
+  position: relative; /* establish neares positioned ancenstor for absolute positioning */
+}
+
+.height-100vh .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: $primary-font-color;
+  font-weight: bold;
+  font-size: 2em;
 }

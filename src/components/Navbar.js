@@ -4,30 +4,15 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      home: 'navbar__selected',
-      about: 'navbar__not-selected',
+      about: 'navbar__selected',
       portfolio: 'navbar__not-selected',
       resume: 'navbar__not-selected',
       contact: 'navbar__not-selected'
     };
   }
 
-  handleOnClickHome = event => {
-    this.setState({
-      home: 'navbar__selected',
-      about: 'navbar__not-selected',
-      portfolio: 'navbar__not-selected',
-      resume: 'navbar__not-selected',
-      contact: 'navbar__not-selected'
-    });
-    document
-      .getElementById('landing')
-      .scrollIntoView({ block: 'start', behavior: 'smooth' });
-  };
-
   handleOnClickAbout = event => {
     this.setState({
-      home: 'navbar__not-selected',
       about: 'navbar__selected',
       portfolio: 'navbar__not-selected',
       resume: 'navbar__not-selected',
@@ -40,7 +25,6 @@ class Navbar extends Component {
 
   handleOnClickPortfolio = event => {
     this.setState({
-      home: 'navbar__not-selected',
       about: 'navbar__not-selected',
       portfolio: 'navbar__selected',
       resume: 'navbar__not-selected',
@@ -53,7 +37,6 @@ class Navbar extends Component {
 
   handleOnClickResume = event => {
     this.setState({
-      home: 'navbar__not-selected',
       about: 'navbar__not-selected',
       portfolio: 'navbar__not-selected',
       resume: 'navbar__selected',
@@ -63,7 +46,6 @@ class Navbar extends Component {
 
   handleOnClickContact = event => {
     this.setState({
-      home: 'navbar__not-selected',
       about: 'navbar__not-selected',
       portfolio: 'navbar__not-selected',
       resume: 'navbar__not-selected',
@@ -78,20 +60,16 @@ class Navbar extends Component {
     return (
       <div className='navbar'>
         <div
-          className={this.state.home}
-          onClick={this.handleOnClickHome}
-          name='home'
-          value='home'
-        >
-          Home
-        </div>
-        <div
           className={this.state.about}
           onClick={this.handleOnClickAbout}
           name='about'
           value='about'
         >
-          About
+          <span className='text'>About</span>
+          <span className='icon'>
+            <img className='icon' src='/images/about.png' alt='about' />
+            <div>About</div>
+          </span>
         </div>
         <div
           className={this.state.portfolio}
@@ -99,7 +77,11 @@ class Navbar extends Component {
           name='portfolio'
           value='portfolio'
         >
-          Portfolio
+          <span className='text'>Portfolio</span>
+          <span className='icon'>
+            <img className='icon' src='/images/portfolio.png' alt='portfolio' />
+            <div>Portfolio</div>
+          </span>
         </div>
         <div
           className={this.state.resume}
@@ -107,7 +89,11 @@ class Navbar extends Component {
           name='resume'
           value='resume'
         >
-          Resume
+          <span className='text'>Resumé</span>
+          <span className='icon'>
+            <img className='icon' src='/images/resume.png' alt='resume' />
+            <div>Resumé</div>
+          </span>
         </div>
         <div
           className={this.state.contact}
@@ -115,7 +101,11 @@ class Navbar extends Component {
           name='contact'
           value='contact'
         >
-          Contact
+          <span className='text'>Contact</span>
+          <span className='icon'>
+            <img className='icon' src='/images/contact.png' alt='contact' />
+            <div>Contact</div>
+          </span>
         </div>
       </div>
     );

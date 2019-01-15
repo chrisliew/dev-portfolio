@@ -13,7 +13,8 @@ class Landing extends Component {
         <div className='landing__text'>
           <div className='landing__text--child1'>
             Hello, I'm <span className='landing__name'>Chris Liew.</span>
-            <br />A full stack developer.
+            <br />
+            I'm a full stack developer.
           </div>
           <div className='landing__text--child2'>
             <button className='landing__button' onClick={this.handleOnClick}>
