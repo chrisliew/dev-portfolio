@@ -68,7 +68,7 @@ const Contact = () => {
             <img className='logo' src='/images/resume.png' alt='resume' />
           </a>
           <a
-            href='https://www.linkedin.com/in/c-liew/'
+            href='https://resume.creddle.io/resume/6j6fnjds5c7'
             target='_blank'
             rel='noopener noreferrer'
           >

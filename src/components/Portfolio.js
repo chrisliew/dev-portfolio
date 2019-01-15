@@ -14,9 +14,6 @@ export const projects = [
         pickup and delivery, and send a payment through the Stripe API.
         <br />
         <br />
-        <b>My Role:</b> Coded the entire project myself.
-        <br />
-        <br />
         <u>
           <b>Tech Stack:</b>
         </u>{' '}
@@ -46,10 +43,6 @@ export const projects = [
         reporting tools. There's an SMS function using Twilio.
         <br />
         <br />
-        <b>My Role:</b> Working in a team of 3, I built most of the front end in
-        React and some of the back end routes.
-        <br />
-        <br />
         <u>
           <b>Tech Stack:</b>
         </u>{' '}
@@ -67,20 +60,15 @@ export const projects = [
     )
   },
   {
-    title: 'Shinny Crew',
+    title: 'Chatty',
     image: '/images/Chatty.png',
-    site: true,
+    site: false,
     url: '',
-    github: 'https://github.com/chrisliew/healthii',
+    github: 'https://github.com/chrisliew/chatty',
     text: (
       <p>
-        Healthii connects health care providers with customers. You can login as
-        both a client and a provider, each with it's own seperate UX and
-        reporting tools. There's an SMS function using Twilio.
-        <br />
-        <br />
-        <b>My Role:</b> Working in a team of 3, I built most of the front end in
-        React and some of the back end routes.
+        Chatty App is a real time instant messenger app that allows multiple
+        users to login to a chatroom and share pictures and texts.
         <br />
         <br />
         <u>
@@ -88,12 +76,7 @@ export const projects = [
         </u>{' '}
         <br />
         <b>Front End: </b>Javascript, ReactJS. <br />
-        <b>Back End: </b>Node and Express JS for the server. PostGresSQL and
-        Knex for the database.
-        <br />
-        <b>Libraries/Frameworks:</b> Passport.js, Nodemailer, Moment.js,
-        Bootstrap <br />
-        <b>APIs:</b> Twilio.
+        <b>Back End: </b>Node, Websockets, and Express JS for the server.
         <br />
         <br />
       </p>
@@ -206,7 +189,7 @@ class Portfolio extends Component {
             alt={projects[2].image}
           />
           {this.state.activeClass3 === 'active' ? (
-            <div className='text'>Shinny Crew</div>
+            <div className='text'>Chatty</div>
           ) : (
             ''
           )}

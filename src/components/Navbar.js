@@ -89,11 +89,18 @@ class Navbar extends Component {
           name='resume'
           value='resume'
         >
-          <span className='text'>Resumé</span>
-          <span className='icon'>
-            <img className='icon' src='/images/resume.png' alt='resume' />
-            <div>Resumé</div>
-          </span>
+          <a
+            className='resume-link'
+            href='https://resume.creddle.io/resume/6j6fnjds5c7'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <span className='text'>Resumé</span>
+            <span className='icon'>
+              <img className='icon' src='/images/resume.png' alt='resume' />
+              <div>Resumé</div>
+            </span>
+          </a>
         </div>
         <div
           className={this.state.contact}

@@ -1,35 +1,20 @@
 import React, { Component } from 'react';
-import { StickyContainer, Sticky } from 'react-sticky';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Landing from './components/Landing';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
+import Home from './components/Home';
+import ResumeCL from './components/Resume';
 
 import './App.scss';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        {/* <Navbar /> */}
-        <Landing />
-        <StickyContainer>
-          <Sticky>
-            {({ style }) => (
-              <div>
-                <header style={style} className='sticky'>
-                  <Navbar />
-                </header>
-              </div>
-            )}
-          </Sticky>
-          <About />
-          <Portfolio />
-          <Contact />
-        </StickyContainer>
-      </div>
+      <Router>
+        <div>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/resume' component={ResumeCL} />
+        </div>
+      </Router>
     );
   }
 }

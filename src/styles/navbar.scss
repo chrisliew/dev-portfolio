@@ -16,7 +16,8 @@
   margin: 1.1em;
 }
 
-.navbar__not-selected {
+.navbar__not-selected,
+.resume-link {
   text-decoration: none;
   color: white;
   transition: color 0.2s linear;
